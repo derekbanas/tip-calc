@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TipCalc" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="eGJ-f7-Ew2">
+                                <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="54" translatesAutoresizingMaskIntoConstraints="NO" id="6P1-V1-UFA" userLabel="TotalBillSV">
+                                <rect key="frame" x="60" y="10" width="776" height="34"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Bill : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FwL-3t-koy">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="34"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mMF-2a-ML0">
+                                        <rect key="frame" x="415" y="0.0" width="361" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad"/>
+                                        <connections>
+                                            <action selector="totalBillTextFieldChanged:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="jaq-11-8DF"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="54" translatesAutoresizingMaskIntoConstraints="NO" id="6Go-nG-vPi" userLabel="TipSV">
+                                <rect key="frame" x="60" y="64" width="776" height="34"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="64z-7j-MsG">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="34"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2EY-c4-ajy">
+                                        <rect key="frame" x="415" y="0.0" width="361" height="34"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" notEnabled="YES"/>
+                                        </accessibility>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="54" translatesAutoresizingMaskIntoConstraints="NO" id="HdI-eH-hjC" userLabel="TotalSV">
+                                <rect key="frame" x="60" y="118" width="776" height="34"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="01D-ti-XXM">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="34"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bmL-i8-cAO">
+                                        <rect key="frame" x="415" y="0.0" width="361" height="34"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" notEnabled="YES"/>
+                                        </accessibility>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="bbK-yI-et4" userLabel="Tip%SV">
+                                <rect key="frame" x="60" y="172" width="776" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip % :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tuq-gU-lrd">
+                                        <rect key="frame" x="0.0" y="0.0" width="77.333333333333329" height="30"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="15" minValue="0.0" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="tPN-HX-gt8">
+                                        <rect key="frame" x="115.33333333333337" y="0.0" width="572" height="31"/>
+                                        <connections>
+                                            <action selector="tipSliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="5Uk-Qc-Lpm"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7oA-dP-eBh">
+                                        <rect key="frame" x="725.33333333333337" y="0.0" width="50.666666666666629" height="30"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="56" translatesAutoresizingMaskIntoConstraints="NO" id="jsa-PS-YiP" userLabel="SplitSV">
+                                <rect key="frame" x="60" y="222" width="776" height="32"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Split :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q1r-Yj-dc2">
+                                        <rect key="frame" x="0.0" y="0.0" width="561.33333333333337" height="32"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="52" translatesAutoresizingMaskIntoConstraints="NO" id="8qt-xx-zLG" userLabel="StepperSV">
+                                        <rect key="frame" x="617.33333333333337" y="0.0" width="158.66666666666663" height="32"/>
+                                        <subviews>
+                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="ech-Ml-ABs">
+                                                <rect key="frame" x="0.0" y="0.0" width="94" height="32"/>
+                                                <connections>
+                                                    <action selector="splitStepperChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="rHc-34-cOm"/>
+                                                </connections>
+                                            </stepper>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="adU-bu-0ET">
+                                                <rect key="frame" x="146" y="0.0" width="12.666666666666657" height="32"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="54" translatesAutoresizingMaskIntoConstraints="NO" id="cPY-cG-FV7" userLabel="TipSplitSV">
+                                <rect key="frame" x="60" y="274" width="776" height="34"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip Split :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5qH-V2-nFY">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="34"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rtA-Wf-7Tm">
+                                        <rect key="frame" x="415" y="0.0" width="361" height="34"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" notEnabled="YES"/>
+                                        </accessibility>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="54" translatesAutoresizingMaskIntoConstraints="NO" id="2uB-zq-NXI" userLabel="TotalSplitSV">
+                                <rect key="frame" x="60" y="328" width="776" height="34"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Split :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Py-zA-dor">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="34"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W1i-9O-Ofp">
+                                        <rect key="frame" x="415" y="0.0" width="361" height="34"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" notEnabled="YES"/>
+                                        </accessibility>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6P1-V1-UFA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="0wj-1F-bTF"/>
+                            <constraint firstItem="eGJ-f7-Ew2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="1SN-vu-K5c"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jsa-PS-YiP" secondAttribute="trailing" id="1wN-zL-Pau"/>
+                            <constraint firstItem="jsa-PS-YiP" firstAttribute="top" secondItem="bbK-yI-et4" secondAttribute="bottom" constant="20" id="2t2-2d-OHe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6P1-V1-UFA" secondAttribute="trailing" id="G6J-tV-fio"/>
+                            <constraint firstItem="2uB-zq-NXI" firstAttribute="top" secondItem="cPY-cG-FV7" secondAttribute="bottom" constant="20" id="GFS-yi-ZMi"/>
+                            <constraint firstAttribute="trailing" secondItem="eGJ-f7-Ew2" secondAttribute="trailing" id="H8H-sg-miP"/>
+                            <constraint firstAttribute="bottom" secondItem="eGJ-f7-Ew2" secondAttribute="bottom" id="HQ5-tu-wLZ"/>
+                            <constraint firstItem="6Go-nG-vPi" firstAttribute="top" secondItem="6P1-V1-UFA" secondAttribute="bottom" constant="20" id="QOH-GO-smz"/>
+                            <constraint firstItem="6P1-V1-UFA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="RLb-sg-p1G"/>
+                            <constraint firstItem="HdI-eH-hjC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="WEk-bI-Wh8"/>
+                            <constraint firstItem="eGJ-f7-Ew2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="YyJ-13-c3q"/>
+                            <constraint firstItem="6Go-nG-vPi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="bqb-EE-yQt"/>
+                            <constraint firstItem="bbK-yI-et4" firstAttribute="top" secondItem="HdI-eH-hjC" secondAttribute="bottom" constant="20" id="dCI-fc-azR"/>
+                            <constraint firstItem="cPY-cG-FV7" firstAttribute="top" secondItem="jsa-PS-YiP" secondAttribute="bottom" constant="20" id="htP-xQ-ovx"/>
+                            <constraint firstItem="HdI-eH-hjC" firstAttribute="top" secondItem="6Go-nG-vPi" secondAttribute="bottom" constant="20" id="ivj-sN-gbo"/>
+                            <constraint firstItem="2uB-zq-NXI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="mhr-f6-0hC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HdI-eH-hjC" secondAttribute="trailing" id="o53-UU-Poe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2uB-zq-NXI" secondAttribute="trailing" id="qby-fF-hO6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cPY-cG-FV7" secondAttribute="trailing" id="rGW-2b-pvj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6Go-nG-vPi" secondAttribute="trailing" id="v3l-mO-AuZ"/>
+                            <constraint firstItem="cPY-cG-FV7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="vL2-ks-6Zy"/>
+                            <constraint firstItem="bbK-yI-et4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="wix-P1-JMp"/>
+                            <constraint firstItem="jsa-PS-YiP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ylH-Tb-sr7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bbK-yI-et4" secondAttribute="trailing" id="z75-Dn-Q0D"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="splitLabel" destination="adU-bu-0ET" id="cPF-8u-Vof"/>
+                        <outlet property="tipPercentLabel" destination="7oA-dP-eBh" id="QNt-WA-86v"/>
+                        <outlet property="tipSplitTextField" destination="rtA-Wf-7Tm" id="cKe-Wq-447"/>
+                        <outlet property="tipTextField" destination="2EY-c4-ajy" id="byP-wz-Gzk"/>
+                        <outlet property="totalBillTextField" destination="mMF-2a-ML0" id="Z4b-Uw-wlv"/>
+                        <outlet property="totalSplitTextField" destination="W1i-9O-Ofp" id="wrb-SP-4EO"/>
+                        <outlet property="totalTextField" destination="bmL-i8-cAO" id="D7U-JB-NNL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="850" height="1277"/>
+    </resources>
+</document>
